@@ -44,7 +44,7 @@ semantics.
   retained as an empty set.
 - **`route-message`** is the routing core: `rooms + signal-msg -> deliveries
   | error`. It never mutates state and performs no I/O, so it is fully unit
-  tested (`test/kotoba/rt/core_test.clj`) without any network harness.
+  tested (`test/kotoba/rt/core_test.cljk`) without any network harness.
   Errors are returned as data (`{:error kind :message ...}`), not thrown,
   for the same reason — kinds: `:room-not-found`, `:sender-not-in-room`,
   `:recipient-not-in-room`, `:malformed-message`.
