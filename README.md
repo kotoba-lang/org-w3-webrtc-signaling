@@ -77,12 +77,12 @@ this contract.
 
 ## Correctness
 
-`clojure -M:test`: join/leave/room-members, membership-event
+`kbb -M:test`: join/leave/room-members, membership-event
 folding, unicast routing, broadcast routing (including "alone in room" =>
 empty delivery list), and all four error kinds — green (6 tests / 22
 assertions, verified 2026-08-13).
 
-The `bb test` alternative that used to be noted here is **unavailable**:
+The `kbb -M:test` alternative that used to be noted here is **unavailable**:
 babashka was retired as this workspace's script host (ADR-2607173000) and the
 conversion left `scripts/tasks.edn` empty, so it has had no runnable path since
 2026-07-17 (ADR-2608131600).
