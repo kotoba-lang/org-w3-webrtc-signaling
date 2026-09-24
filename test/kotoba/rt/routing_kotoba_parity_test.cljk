@@ -31,7 +31,7 @@
 ;;     exactly like a successful one.
 
 (ns kotoba.rt.routing-kotoba-parity-test
-  (:require [clojure.java.io :as io]
+  (:require [kotoba.io :as io]
             [kotoba.test :refer [deftest is testing]]
             [kotoba.compiler.core :as compiler]
             [kotoba.kir :as ir]
@@ -89,7 +89,7 @@
 ;; --- the tests -----------------------------------------------------------------
 
 (deftest guest-source-is-present
-  (is (.exists guest-file) (str "kotoba object not found at " guest-file)))
+  (is (io/exists? guest-file) (str "kotoba object not found at " guest-file)))
 
 (deftest a-unicast-goes-to-exactly-one-client
   (let [msg (signal "alice" "bob")
