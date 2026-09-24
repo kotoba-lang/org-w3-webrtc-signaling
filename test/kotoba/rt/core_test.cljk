@@ -1,5 +1,5 @@
 (ns kotoba.rt.core-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotoba.rt.core :as rt]))
 
 (deftest join-leave-room-members
